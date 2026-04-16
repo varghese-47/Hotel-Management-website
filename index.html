@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Grand Aurum – Luxury Hotel</title>
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css" />
+  <script src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+
+  
+  <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div id="loader">
+    <div class="loader-inner">
+      <div class="loader-ornament top"></div>
+      <div class="loader-logo">
+        <span class="loader-hotel-name">The Grand Aurum</span>
+        <span class="loader-tagline">Made by group 13</span>
+      </div>
+      <div class="loader-ornament bottom"></div>
+      <div class="loader-bar-wrap"><div class="loader-bar"></div></div>
+    </div>
+  </div>
+
+
+  <nav id="navbar">
+    <div class="nav-brand">
+      <span class="nav-brand-name">The Grand Aurum</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#hero"      class="nav-link active" data-section="hero">Home</a></li>
+      <li><a href="#rooms"     class="nav-link"        data-section="rooms">Rooms</a></li>
+      <li><a href="#amenities" class="nav-link"        data-section="amenities">Amenities</a></li>
+      <li><a href="#booking"   class="nav-link"        data-section="booking">Reservations</a></li>
+    </ul>
+    <a href="#booking" class="nav-cta">Book Now</a>
+    <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-close" id="mobileClose">✕</button>
+    <ul>
+      <li><a href="#hero"      class="mobile-link">Home</a></li>
+      <li><a href="#rooms"     class="mobile-link">Rooms</a></li>
+      <li><a href="#amenities" class="mobile-link">Amenities</a></li>
+      <li><a href="#booking"   class="mobile-link">Reservations</a></li>
+    </ul>
+  </div>
+
+
+  <section id="hero">
+    <div class="hero-bg" ></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-pre">Welcome to</p>
+      <h1 class="hero-title">The Grand Aurum</h1>
+      <div class="hero-divider">
+        <span class="divider-line"></span>
+        <span class="divider-diamond">◆</span>
+        <span class="divider-line"></span>
+      </div>
+      <p class="hero-sub">Where every moment becomes an eternal memory</p>
+      <a href="#booking" class="btn-gold">Reserve Your Suite</a>
+    </div>
+    <div class="scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <section id="rooms" class="section fade-section">
+    <div class="section-header">
+      <p class="section-pre">Accommodations</p>
+      <h2 class="section-title">Our Curated Rooms & Suites</h2>
+      <div class="section-divider">
+        <span class="divider-line"></span>
+        <span class="divider-diamond">◆</span>
+        <span class="divider-line"></span>
+      </div>
+
+    <div class="rooms-grid">
+
+      <div class="room-card" data-room="deluxe">
+        <div class="room-img-wrap">
+          <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&q=80" alt="Deluxe Room" loading="lazy" />
+          <div class="room-img-overlay"></div>
+        </div>
+        <div class="room-info">
+          <h3 class="room-name">Deluxe Room</h3>
+          <p class="room-desc">Spacious elegance with city views, king bed, and marble bath.</p>
+          <div class="room-meta">
+            <span>45 m²</span><span class="meta-dot">·</span>
+            <span>2 Guests</span><span class="meta-dot">·</span>
+            <span>City View</span>
+          </div>
+          <div class="room-footer">
+            <span class="room-price">₹18,000 <small>/night</small></span>
+            <button class="btn-outline" onclick="openRoomModal('deluxe')">Explore →</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="room-card" data-room="premier">
+        <div class="room-img-wrap">
+          <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800&q=80" alt="Premier Suite" loading="lazy" />
+          <div class="room-img-overlay"></div>
+        </div>
+        <div class="room-info">
+          <h3 class="room-name">Premier Suite</h3>
+          <p class="room-desc">A symphony of luxury with private lounge, butler service, and garden views.</p>
+          <div class="room-meta">
+            <span>85 m²</span><span class="meta-dot">·</span>
+            <span>3 Guests</span><span class="meta-dot">·</span>
+            <span>Garden View</span>
+          </div>
+          <div class="room-footer">
+            <span class="room-price">₹32,000 <small>/night</small></span>
+            <button class="btn-outline" onclick="openRoomModal('premier')">Explore →</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="room-card" data-room="royal">
+        <div class="room-img-wrap">
+          <img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Royal Suite" loading="lazy" />
+          <div class="room-img-overlay"></div>
+        </div>
+        <div class="room-info">
+          <h3 class="room-name">Royal Suite</h3>
+          <p class="room-desc">The pinnacle of opulence – a private palace with a personal pool terrace.</p>
+          <div class="room-meta">
+            <span>160 m²</span><span class="meta-dot">·</span>
+            <span>4 Guests</span><span class="meta-dot">·</span>
+            <span>Pool Terrace</span>
+          </div>
+          <div class="room-footer">
+            <span class="room-price">₹75,000 <small>/night</small></span>
+            <button class="btn-outline" onclick="openRoomModal('royal')">Explore →</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="amenities" class="section fade-section amenities-section">
+     <p class="sub-heading">WHAT WE OFFER</p>
+
+
+    <div class="amenities-container">
+
+        <div class="amenity-card">
+            <h3>🍽️</h3>
+            <h4>Fine Dining</h4>
+            <p>Multi-cuisine restaurant open all day with live cooking stations.</p>
+        </div>
+
+        <div class="amenity-card">
+            <h3>🏊</h3>
+            <h4>Infinity Pool</h4>
+            <p>Rooftop pool with stunning city skyline views.</p>
+        </div>
+
+        <div class="amenity-card">
+            <h3>🧖</h3>
+            <h4>Spa & Wellness</h4>
+            <p>Full-service spa with Ayurvedic and international treatments.</p>
+        </div>
+
+        <div class="amenity-card">
+            <h3>🏋️</h3>
+            <h4>Fitness Center</h4>
+            <p>State-of-the-art gym open 24 hours with certified trainers.</p>
+        </div>
+
+        <div class="amenity-card">
+            <h3>🅿️</h3>
+            <h4>Smart Parking</h4>
+            <p>Automated parking management with valet service available.</p>
+        </div>
+
+        <div class="amenity-card">
+            <h3>📶</h3>
+            <h4>High-Speed WiFi</h4>
+            <p>Complimentary fiber-optic internet throughout the property.</p>
+        </div>
+
+    </div>
+</section>
+
+  <section id="booking" class="section fade-section booking-section">
+    <div class="booking-bg" style="background-image: url('https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?w=1800&q=80')"></div>
+    <div class="booking-overlay"></div>
+
+    <div class="booking-container">
+      <div class="booking-header">
+        <p class="section-pre">Reservations</p>
+        <h2 class="section-title">Begin Your Stay</h2>
+        <div class="section-divider">
+          <span class="divider-line"></span>
+          <span class="divider-diamond">◆</span>
+          <span class="divider-line"></span>
+        </div>
+      </div>
+
+      <form class="booking-form" id="bookingForm" onsubmit="handleBooking(event)">
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="guestName">Full Name</label>
+            <input type="text" id="guestName" placeholder="Your Name" required />
+          </div>
+          <div class="form-group">
+            <label for="guestEmail">Email Address</label>
+            <input type="email" id="guestEmail" placeholder="you@example.com" required />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="checkIn">Check-In Date</label>
+            <input type="date" id="checkIn" required />
+          </div>
+          <div class="form-group">
+            <label for="checkOut">Check-Out Date</label>
+            <input type="date" id="checkOut" required />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="guests">Number of Guests</label>
+            <select id="guests">
+              <option value="1">1 Guest</option>
+              <option value="2">2 Guests</option>
+              <option value="3">3 Guests</option>
+              <option value="4">4 Guests</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="roomType">Room Type</label>
+            <select id="roomType">
+              <option value="deluxe">Deluxe Room — ₹18,000/night</option>
+              <option value="premier">Premier Suite — ₹32,000/night</option>
+              <option value="royal">Royal Suite — ₹75,000/night</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group full-width">
+          <label for="requests">Special Requests</label>
+          <textarea id="requests" rows="3" placeholder="Any special arrangements, dietary needs, or occasion details..."></textarea>
+        </div>
+
+        <div class="form-submit">
+          <button type="submit" class="btn-gold large">Confirm Reservation</button>
+          <p class="form-note">Free cancellation up to 48 hours before arrival. </p>
+        </div>
+
+      </form>
+    </div>
+  </section>
+
+
+
+  <div id="roomModal" class="modal-backdrop" onclick="closeModal(event)">
+    <div class="modal-box" id="modalBox">
+      <button class="modal-close" onclick="closeRoomModal()">✕</button>
+      <div class="modal-viewer" id="panoramaContainer"></div>
+      <div class="modal-details" id="modalDetails">
+      </div>
+    </div>
+  </div>
+
+
+  <div class="toast" id="toast">
+    <span class="toast-icon">◆</span>
+    <span class="toast-msg">Your reservation has been confirmed. We look forward to welcoming you.</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
